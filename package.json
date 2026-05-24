@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "App Review Insights Analyser - Ingests and summarizes app reviews using Groq and MCP",
   "main": "dist/index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "build": "tsc",
     "start": "ts-node src/index.ts",
-    "start:prod": "ts-node src/server.ts",
+    "start:prod": "node dist/server.js",
     "test": "jest"
   },
   "dependencies": {

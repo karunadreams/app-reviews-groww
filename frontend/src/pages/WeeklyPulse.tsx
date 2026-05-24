@@ -1,10 +1,9 @@
-import { FileText, Copy, CheckCircle, Loader2 } from 'lucide-react';
+import { Copy, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
 import { generatePulseMarkdown } from '../utils/exportTemplate';
 
 export default function WeeklyPulse() {
   const [copied, setCopied] = useState(false);
-  const [isExporting, setIsExporting] = useState(false);
 
   const pulseContent = generatePulseMarkdown();
 

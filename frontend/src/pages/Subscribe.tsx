@@ -3,7 +3,6 @@ import { useState } from 'react';
 
 export default function Subscribe() {
   const [email, setEmail] = useState('');
-  const [role, setRole] = useState('Product Manager');
   const [submitted, setSubmitted] = useState(false);
   const [includeQuotes, setIncludeQuotes] = useState(true);
 

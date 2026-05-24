@@ -8,11 +8,9 @@ import {
   ChevronDown,
   Layers,
   List,
-  Mail,
-  Smartphone
+  Mail
 } from 'lucide-react';
 import ExportModal from './ExportModal';
-import FloatingSubscribe from './FloatingSubscribe';
 
 export default function Layout() {
   const [isExportOpen, setIsExportOpen] = useState(false);

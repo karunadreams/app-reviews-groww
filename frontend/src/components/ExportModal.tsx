@@ -1,4 +1,4 @@
-import { X, FileText, FileDown, Mail, CheckCircle, Loader2 } from 'lucide-react';
+import { X, FileDown, Mail, CheckCircle, Loader2 } from 'lucide-react';
 import { useState } from 'react';
 import { generatePulseMarkdown } from '../utils/exportTemplate';
 

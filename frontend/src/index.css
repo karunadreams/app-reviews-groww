@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0A0A0F;
+  --color-card: #13131A;
+  --color-groww: #00D09C;
+  --color-groww-dark: #00A97F;
+  --color-text: #f0f2f5;
+  --color-muted: #9ba1a6;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .groww-card {
+    @apply bg-card border border-white/5 rounded-2xl p-6 shadow-md transition-all duration-300;
+  }
+  
+  .groww-card:hover {
+    @apply -translate-y-1 shadow-xl border-white/10;
+  }
+}

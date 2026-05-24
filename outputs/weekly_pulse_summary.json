@@ -1,0 +1,36 @@
+{
+  "topThemes": [
+    {
+      "name": "Brokerage Charges",
+      "description": "High fees for trading",
+      "quotes": [
+        "exorbitantly hi brokerage charges for stock trading",
+        "brokerage is high in stocks",
+        "very high charges from grow"
+      ]
+    },
+    {
+      "name": "App Performance",
+      "description": "Glitches and slow execution",
+      "quotes": [
+        "The app is riddled with glitches and faults",
+        "hang so much",
+        "app lags too much"
+      ]
+    },
+    {
+      "name": "Customer Support",
+      "description": "Poor service and unresponsive team",
+      "quotes": [
+        "customer support bohot bekar he",
+        "Worst customer support.. They are clueless on their own app",
+        "customer support is not good"
+      ]
+    }
+  ],
+  "actionableSteps": [
+    "Reduce brokerage fees",
+    "Improve app performance",
+    "Enhance customer support"
+  ]
+}

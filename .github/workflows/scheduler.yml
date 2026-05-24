@@ -1,0 +1,36 @@
+name: Weekly App Review Scheduler
+
+on:
+  schedule:
+    # Run at midnight (00:00) every Sunday
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+    # Allow manual triggering from the GitHub UI
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install Dependencies
+        run: npm ci || npm install
+        
+      - name: Fetch Latest Reviews
+        run: npx ts-node scripts/fetchGrowwReviews.ts
+        
+      - name: Run Analysis & Export
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          MCP_SERVER_URL: ${{ secrets.MCP_SERVER_URL }}
+          TARGET_DOC_ID: ${{ secrets.TARGET_DOC_ID }}
+          TARGET_EMAIL: ${{ secrets.TARGET_EMAIL }}
+        run: npm run start -- --file outputs/latest_reviews.csv --max 100

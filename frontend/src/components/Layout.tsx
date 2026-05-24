@@ -81,10 +81,10 @@ export default function Layout() {
                 value={selectedWeeks}
                 onChange={(e) => setSelectedWeeks(Number(e.target.value))}
               >
-                <option value={3}>Last 3 Weeks</option>
-                <option value={6}>Last 6 Weeks</option>
-                <option value={9}>Last 9 Weeks</option>
-                <option value={12}>Last 12 Weeks</option>
+                <option value={3} className="bg-[#0A0A0F] text-white">Last 3 Weeks</option>
+                <option value={6} className="bg-[#0A0A0F] text-white">Last 6 Weeks</option>
+                <option value={9} className="bg-[#0A0A0F] text-white">Last 9 Weeks</option>
+                <option value={12} className="bg-[#0A0A0F] text-white">Last 12 Weeks</option>
               </select>
               <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-muted">
                 <ChevronDown size={16} />
